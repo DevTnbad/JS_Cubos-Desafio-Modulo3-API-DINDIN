@@ -8,6 +8,12 @@ const options = {
             version: '1.0.0',
             description: 'API Dindin',
         },
+        // tags: [ // Defina as tags aqui
+        //     {
+        //         name: 'Categoria',
+        //         description: 'Operações relacionadas a categorias',
+        //     },
+        // ],
         components: {
             securitySchemes: {
                 bearerAuth: {
@@ -24,7 +30,7 @@ const options = {
         ],
     },
     //apis: ['./src/controladores/*.js'], // Caminho para os arquivos que contêm as rotas da API
-    apis: ['./src/documentacao/*.js'], // Caminho para os arquivos que contêm as rotas da API,
+    apis: ['./src/documentacao/*.js'], // Caminho para os arquivos que contêm as rotas da API
 };
 
 const swaggerSpec = swaggerJsdoc(options);

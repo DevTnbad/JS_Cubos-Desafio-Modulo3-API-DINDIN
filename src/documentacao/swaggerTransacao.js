@@ -9,7 +9,6 @@
  *     parameters:
  *       - in: query
  *         name: filtro
- *         required: opcional // 
  *         schema:
  *           type: array
  *           items:

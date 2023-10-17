@@ -1,11 +1,5 @@
 const swaggerJsdoc = require('swagger-jsdoc');
 
-const tags = [
-    { name: "usuario", description: "Operações relacionadas a usuários" },
-    { name: "transacoes", description: "Operações relacionadas a transações" },
-    { name: "categoria", description: "Operações relacionadas a categorias" }
-  ];
-
 const options = {
     definition: {
         openapi: '3.0.0',
@@ -30,8 +24,7 @@ const options = {
         ],
     },
     //apis: ['./src/controladores/*.js'], // Caminho para os arquivos que contêm as rotas da API
-    apis: ['./src/documentacao/*.js'], // Caminho para os arquivos que contêm as rotas da API
-    tags: tags,
+    apis: ['./src/documentacao/*.js'], // Caminho para os arquivos que contêm as rotas da API,
 };
 
 const swaggerSpec = swaggerJsdoc(options);

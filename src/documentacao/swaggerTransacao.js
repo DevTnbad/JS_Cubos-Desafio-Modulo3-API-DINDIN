@@ -15,7 +15,7 @@
  *             type: string
  *         style: form
  *         explode: true
- *         description: Filtre as transações por categoria(s). Digite a categoria ou parte da categoria desejada.
+ *         description: Filtre as transações por categoria(s). Digite a categoria ou parte da categoria desejada. Para mostrar todas as transacoes deixe o campo de filtragem em branco.
  *         required: false  // Defina como opcional
  *     responses:
  *       '200':

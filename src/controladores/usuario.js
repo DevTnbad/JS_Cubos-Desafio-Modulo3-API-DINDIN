@@ -2,7 +2,7 @@ const bcrypt = require('bcrypt');
 const pool = require('../conexao');
 const jwt = require('jsonwebtoken');
 const chaveSecreta = require('../chaveSecreta');
-const { encontraUsuario } = require('../../testes/util');
+
 
 
 const login = async (req, res) => {
@@ -82,10 +82,9 @@ const cadastrar = async (req, res) => {
 const detalhar = async (req, res) => {
     const idUsuario = req.usuario;
     try {
-        console.log(((await encontraUsuario('usuarios', idUsuario)).rows).length);
-        // const query = `select * from usuarios where id = $1`;
-        // const consulta = await pool.query(query, [idUsuario]);
-        const consulta = await encontraUsuario('usuarios', idUsuario)
+        const query = `select * from usuarios where id = $1`;
+        const consulta = await pool.query(query, [idUsuario]);
+        
         const { senha, ...saida } = consulta.rows[0];
         return res.status(200).json(saida);
     } catch (erro) {

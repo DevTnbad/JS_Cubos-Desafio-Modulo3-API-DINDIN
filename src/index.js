@@ -8,7 +8,7 @@ const app = express();
 
 app.use(express.json());
 
-app.use('/', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 app.use(rotas);
 const porta = process.env.PORT || 3000
